@@ -3,8 +3,8 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 100px 100px 70px;
-      grid-template-rows: 1fr 1fr 100px 100px 70px;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
       grid-template-areas: "b b b b b b"  "b b b b b b" "b b b b b b" "f g r w q y" "m m c c k k";
 }
@@ -91,5 +91,84 @@ p {
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-area: k;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "b b b b" "b b b b"  "b b b b"  "b b b b" "b b b b" "f g r w" "q y m m" "c c k k";
+  }
+  .p1 {
+    background: orange;
+    border: 2px rosybrown;
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: f;
+  }
+  .p4 {
+    background: orange;
+    border: 2px rosybrown;
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+    grid-area: g;
+  }
+  .p5 {
+    background: orange;
+    border: 2px rosybrown;
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+    grid-area: r;
+  }
+  .p2 {
+    background: #c95c6e;
+    border: 2px rosybrown;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: b;
+  }
+  .p3 {
+    background: #573d41;
+    -ms-grid-row: 6;
+    -ms-grid-column: 4;
+    grid-area: w;
+  }
+  .p9 {
+    background: #573d41;
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: q;
+  }
+  .p10 {
+    background: #573d41;
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+    grid-area: y;
+  }
+  .p6 {
+    background: #db6403;
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: m;
+  }
+  .p7 {
+    background: #a02600;
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: c;
+  }
+  .p8 {
+    background: #db6403;
+    -ms-grid-row: 8;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: k;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
